@@ -11,9 +11,9 @@ Requisitos Técnicos
 
 O sistema deverá conter três páginas principais:
 
-: Formulário para novos usuários se registrarem
-: Acesso ao sistema para usuários já cadastrados
-: Exibição dos produtos/dados armazenados no Firestore (visível apenas para usuários autenticados)
+Formulário para novos usuários se registrarem
+Acesso ao sistema para usuários já cadastrados
+Exibição dos produtos/dados armazenados no Firestore (visível apenas para usuários autenticados)
 
 Funcionalidades Obrigatórias
 
