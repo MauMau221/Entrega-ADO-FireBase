@@ -1,0 +1,18 @@
+/* Module Card */
+.m-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    margin: 1rem;
+}
+
+.m-card__title {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.m-card__content {
+    color: #666;
+    margin-bottom: 1.5rem;
+} 
