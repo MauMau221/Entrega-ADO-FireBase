@@ -1,11 +1,42 @@
-/* Layout Header */
 .l-header {
     background-color: #f8f9fa;
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    
 }
 
 .l-header h1 {
     color: #333;
     text-align: center;
-} 
+}
+
+.l-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.l-nav__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.l-nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+.l-nav__list li {
+    margin: 0 10px;
+}
+
+.l-nav__list li a {
+    text-decoration: none;
+}
