@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Sistema de Produtos</title>
-    <link rel="stylesheet" href="../styles/login.css">
+    <title>Cadastro - Sistema de Produtos</title>
+    <link rel="stylesheet" href="../styles/register.css">
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="../js/firebase-config.js"></script>
-    <script src="../js/login.js" defer></script>
+    <script src="../js/register.js" defer></script>
 </head>
 <body>
     <div class="container">
         <div class="form-container">
-            <h1>Login</h1>
-            <form id="loginForm">
+            <h1>Cadastro</h1>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
                 <div class="form-group">
                     <label for="email">E-mail</label>
                     <input type="email" id="email" name="email" required>
@@ -24,11 +28,15 @@
                     <label for="password">Senha</label>
                     <input type="password" id="password" name="password" required>
                 </div>
-                <button type="submit" class="btn-login">Entrar</button>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirmar Senha</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                <button type="submit" class="btn-register">Cadastrar</button>
             </form>
-            <p class="register-link">Não tem uma conta? <a href="../pages/register.html">Cadastre-se</a></p>
+            <p class="login-link">Já tem uma conta? <a href="../login/login.html">Faça login</a></p>
             <div id="message" class="message"></div>
         </div>
     </div>
 </body>
-</html>
+</html> 

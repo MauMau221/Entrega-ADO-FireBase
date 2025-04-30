@@ -1,35 +1,85 @@
-# Entrega ADO-FireBase
+# Sistema de Produtos com Firebase
 
-Descrição da Atividade
+Este é um sistema web que implementa autenticação de usuários com Firebase Authentication e armazenamento de dados com Firebase Firestore.
 
-Para esta atividade, você deverá desenvolver um sistema web utilizando HTML, CSS e JavaScript que implemente autenticação de usuários com Firebase Authentication e armazenamento de dados com Firebase Firestore.
-Objetivo
+## Funcionalidades
 
-Criar um sistema completo que permita aos usuários se cadastrarem, fazerem login e visualizarem dados armazenados no banco de dados Firestore.
+- Cadastro de usuários
+- Login de usuários
+- Visualização de produtos (apenas para usuários autenticados)
+- Proteção de rotas
+- Interface responsiva
 
-Requisitos Técnicos
+## Tecnologias Utilizadas
 
-O sistema deverá conter três páginas principais:
+- HTML5
+- CSS3
+- JavaScript
+- Firebase Authentication
+- Firebase Firestore
 
-Formulário para novos usuários se registrarem
-Acesso ao sistema para usuários já cadastrados
-Exibição dos produtos/dados armazenados no Firestore (visível apenas para usuários autenticados)
+## Pré-requisitos
 
-Funcionalidades Obrigatórias
+- Conta no Firebase
+- Projeto Firebase configurado
+- Navegador web moderno
 
-Implementação do Firebase Authentication para registro e autenticação de usuários
-Armazenamento e recuperação de dados utilizando Firebase Firestore
-Proteção de rotas (usuários não autenticados não devem acessar a página de listagem)
-Interface responsiva e amigável
-Validação de formulários
+## Configuração
 
-Critérios de Avaliação
+1. Clone este repositório
+2. Crie um projeto no Firebase Console (https://console.firebase.google.com/)
+3. Ative o Authentication e o Firestore no seu projeto Firebase
+4. Copie as credenciais do seu projeto Firebase
+5. Substitua as credenciais no arquivo `js/firebase-config.js`:
 
-Integração correta com Firebase Authentication
-Implementação adequada do Firebase Firestore
-Funcionamento correto do fluxo de cadastro, login e visualização de dados
+```javascript
+const firebaseConfig = {
+    apiKey: "SUA_API_KEY",
+    authDomain: "SEU_AUTH_DOMAIN",
+    projectId: "SEU_PROJECT_ID",
+    storageBucket: "SEU_STORAGE_BUCKET",
+    messagingSenderId: "SEU_MESSAGING_SENDER_ID",
+    appId: "SEU_APP_ID"
+};
+```
 
-Layout responsivo e esteticamente agradável
-Facilidade de navegação e uso
-Feedback visual para ações do usuário (mensagens de erro/sucesso)
-Consistência no design entre as páginas
+## Estrutura do Projeto
+
+```
+├── index.html
+├── js/
+│   ├── firebase-config.js
+│   ├── login.js
+│   ├── register.js
+│   └── products.js
+├── styles/
+│   ├── login.css
+│   ├── register.css
+│   └── products.css
+├── pages/
+│   ├── register.html
+│   └── products.html
+└── login/
+    └── login.html
+```
+
+## Como Usar
+
+1. Abra o arquivo `login/login.html` em seu navegador
+2. Crie uma conta ou faça login se já tiver uma
+3. Após o login, você será redirecionado para a página de produtos
+4. Para sair, clique no botão "Sair" no canto superior direito
+
+## Segurança
+
+- Todas as rotas são protegidas
+- Senhas são armazenadas de forma segura no Firebase Authentication
+- Dados sensíveis são protegidos por regras de segurança do Firestore
+
+## Contribuição
+
+Sinta-se à vontade para contribuir com o projeto. Abra uma issue ou envie um pull request.
+
+## Licença
+
+Este projeto está sob a licença MIT.
